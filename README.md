@@ -1,7 +1,8 @@
 # NBA GraphQL API demo
 1. Install [NodeJS](https://nodejs.org/en/)
-2. Start the service by `npm install` and `npm build`
-3. Navigate to `http://localhost:3000/` to explore the API with [GraphiQL](https://github.com/graphql/graphiql)
+2. Start the service by `npm install` and `npm start`
+3. Navigate to `http://localhost:3000` to see the simple client
+4. Or navigate to `http://localhost:3000/api` to explore the API with [GraphiQL](https://github.com/graphql/graphiql)
 
 ### Usage
 
