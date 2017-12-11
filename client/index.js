@@ -51,9 +51,7 @@ function errorTemplate(errors) {
 }
 
 function render(response) {
-    console.log(response instanceof Error)
     if (response instanceof Error) {
-        console.log(JSON.stringify(response))
         $content.innerHTML = errorTemplate(response.response.errors)
         return
     }
