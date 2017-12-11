@@ -1,4 +1,3 @@
-import NBA from 'nba'
 import {
     GraphQLSchema,
     GraphQLObjectType,

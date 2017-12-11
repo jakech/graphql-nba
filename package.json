@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --out-dir dist/ && node dist/index.js"
+    "build:server": "babel src --out-dir dist/",
+    "build:client": "webpack client/index.js dist/client/app.js",
+    "start": "npm run build:server && npm run build:client && node dist/index.js"
   },
   "license": "MIT",
   "dependencies": {
@@ -11,11 +13,13 @@
     "express": "^4.16.2",
     "express-graphql": "^0.6.11",
     "graphql": "^0.11.7",
+    "graphql-request": "^1.4.0",
     "nba": "^4.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1"
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.10.0"
   }
 }

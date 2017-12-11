@@ -27,11 +27,15 @@ function fetchRoster(teamId) {
 }
 
 function playerByName(name) {
-    return fetchPlayerInfo(NBA.playerIdFromName(name))
+    const id = NBA.playerIdFromName(name)
+    if (id === null) return Promise.reject('Can\'t find player name')
+    return fetchPlayerInfo(id)
 }
 
 function teamByName(name) {
-    return fetchTeamInfo(NBA.teamIdFromName(name))
+    const id = NBA.teamIdFromName(name)
+    if (id === null) return Promise.reject('Can\'t find team name')
+    return fetchTeamInfo(id)
 }
 
 export default {
